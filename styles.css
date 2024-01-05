@@ -4,6 +4,7 @@
 /* Layout Styles */
 .container {
   display: flex;
+  padding: 20px; /* Adding space on both sides */
 }
 
 .left-section {
@@ -11,16 +12,16 @@
   padding: 20px;
   background-color: #f0f0f0;
   position: fixed;
-  height: 100%;
+  height: calc(100% - 40px); /* Adjusting height considering padding */
   overflow: auto;
 }
 
 .right-section {
   flex: 1;
   padding: 20px;
-  margin-left: 30%; /* Adjust for fixed left section width */
+  margin-left: 35%; /* Adjust for fixed left section width and space */
   background-color: #fff; /* Background color for right section */
-  height: 100%;
+  height: calc(100% - 40px); /* Adjusting height considering padding */
   overflow-y: auto; /* Enable vertical scrolling */
 }
 
@@ -34,7 +35,7 @@
 /* Social Icons */
 .social-icons a {
   color: #333; /* Changing icon color */
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 /* Scrolling Content */
