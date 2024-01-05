@@ -127,3 +127,38 @@ footer {
   background-color: #333;
   color: #fff;
 }
+
+/* Reset default margin and padding */
+/* ... (from previous CSS, if any) ... */
+
+/* Layout Styles */
+.container {
+  display: flex;
+}
+
+.left-section {
+  width: 30%;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.right-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.profile img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Scrolling Content */
+.scrollable-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Styling for various sections (Projects, Experience, Skills, Education) can be added here */
+/* For example: h2, h3, p styles for these sections */
+
