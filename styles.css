@@ -1,44 +1,114 @@
-/* Reset default margin and padding */
-/* ... (from previous CSS, if any) ... */
 
-/* Layout Styles */
 .container {
-  display: flex;
-  padding: 5%; /* Adding space on both sides */
-}
+    display: flex;
+    position: relative;
+  }
+  
+  .left-section {
+    width: 30%;
+    padding: 0 20px;
+    background-color: #daf7f5;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: auto;
+  }
+  
+  .right-section {
+    flex: 1;
+    padding: 0 20px;
+    background-color: #ffffff;
+  }
+  
+  /* Specific sections within the right section */
+  .projects-section {
+    background-color: #ebe65f; /* Background color for projects */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(59, 59, 59, 0.1); /* Adding shadow for depth */
+  }
 
-.left-section {
-  width: 25%;
-  padding: 20px;
-  background-color: #f0f0f0;
-  position: fixed;
-  height: calc(100%); /* Adjusting height considering padding */
-  overflow: auto;
-}
+  .project-box {
+    background-color: #ebe65f; /* Shared background color for boxes */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(59, 59, 59, 0.1); /* Adding shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+  }
+  
+  .project-box:hover {
+    background-color: rgba(235, 230, 95, 0.8); /* Change opacity on hover */
+  }
+  
+  .experience-section {
+    background-color: #caeb88; /* Background color for experience */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(59, 59, 59, 0.1); /* Adding shadow for depth */
+  }
+  
+  .skills-section {
+    background-color: #caeb88; /* Background color for skills */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(59, 59, 59, 0.1); /* Adding shadow for depth */
+  }
+  
+  .education-section {
+    background-color: #caeb88; /* Background color for education */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(59, 59, 59, 0.1); /* Adding shadow for depth */
+  }
 
-.right-section {
-  flex: 1;
-  padding: 20px;
-  margin-left: 35%; /* Adjust for fixed left section width and space */
-  background-color: #fff; /* Background color for right section */
-  height: calc(100%); /* Adjusting height considering padding */
-  overflow-y: auto; /* Enable vertical scrolling */
-}
+  .certifications-section {
+    background-color: #caeb88; /* Background color for education */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(59, 59, 59, 0.1); /* Adding shadow for depth */
+  }
+  
+  /* Profile Picture */
+  .profile img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  /* Social Icons */
+  .social-icons a {
+    color: #333; /* Changing icon color */
+    margin-right: 15px;
+  }
+  
+  /* Scrolling Content */
+  .scrollable-content {
+    padding-top: 20px; /* Add padding between sections if needed */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: flex-end; /* Aligns content to the right */
+    background-color: #430202; /* Black background color */
+    color: #ffffff; /* White text color */
+    padding: 30px;
 
-/* Profile Picture */
-.profile img {
-  width: 150px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
+  }
 
-/* Social Icons */
-.social-icons a {
-  color: #333; /* Changing icon color */
-  margin-right: 10px;
-}
-
-/* Scrolling Content */
-.scrollable-content {
-  padding-top: 20px; /* Add padding between sections if needed */
-}
+  .header-links a {
+    margin-left: 15px; /* Add spacing between links */
+    padding: 8px 12px; /* Adjust padding for better click area */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f67a7a; /* Box background color */
+    color: #000000; /* Text color */
+    transition: opacity 0.3s ease; /* Opacity transition on hover */
+  }
+  
+  .header-links a:hover {
+    opacity: 0.7; /* Reduce opacity on hover */
+  }
+  
+  .footer {
+    background-color: #430202; /* Black background color */
+    color: #ffffff; /* White text color */
+    padding: 30px;
+    text-align: center; /* Center-align text */
+  }
+  
+  .footer p {
+    margin: 0; /* Remove default margin for paragraphs */
+  }
