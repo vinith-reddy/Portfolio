@@ -4,7 +4,7 @@
 /* Layout Styles */
 .container {
   display: flex;
-  padding: 20px; /* Adding space on both sides */
+  padding: 40px; /* Adding space on both sides */
 }
 
 .left-section {
@@ -12,7 +12,7 @@
   padding: 20px;
   background-color: #f0f0f0;
   position: fixed;
-  height: calc(100% - 40px); /* Adjusting height considering padding */
+  height: calc(100%); /* Adjusting height considering padding */
   overflow: auto;
 }
 
@@ -21,7 +21,7 @@
   padding: 20px;
   margin-left: 35%; /* Adjust for fixed left section width and space */
   background-color: #fff; /* Background color for right section */
-  height: calc(100% - 40px); /* Adjusting height considering padding */
+  height: calc(100%); /* Adjusting height considering padding */
   overflow-y: auto; /* Enable vertical scrolling */
 }
 
