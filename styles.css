@@ -4,11 +4,11 @@
 /* Layout Styles */
 .container {
   display: flex;
-  padding: 40px; /* Adding space on both sides */
+  padding: 5%; /* Adding space on both sides */
 }
 
 .left-section {
-  width: 30%;
+  width: 25%;
   padding: 20px;
   background-color: #f0f0f0;
   position: fixed;
