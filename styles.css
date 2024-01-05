@@ -1,134 +1,4 @@
 /* Reset default margin and padding */
-body, h1, h2, h3, h4, h5, h6, p, ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* Basic styling */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin-bottom: 5px;
-}
-
-main {
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-}
-
-footer p {
-  margin: 0;
-}
-
-/* Existing CSS remains, add these styles */
-
-/* Reset default margin and padding */
-/* ... (from previous CSS, if any) ... */
-
-/* Header Styles */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.about-me {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  margin: 5px;
-}
-
-/* Projects Section */
-#projects {
-  padding: 20px;
-}
-
-.project {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.project img {
-  width: 200px; /* Adjust as needed */
-  margin-right: 20px;
-}
-
-.project-details {
-  flex: 1;
-}
-
-.project-details h3 {
-  margin-bottom: 10px;
-}
-
-.project-links a {
-  margin-right: 10px;
-  text-decoration: none;
-  color: #333;
-  background-color: #eee;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-/* Other sections (experience, education, contact) styles can be added similarly */
-
-/* Footer Styles */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-}
-
-/* Reset default margin and padding */
 /* ... (from previous CSS, if any) ... */
 
 /* Layout Styles */
@@ -140,25 +10,34 @@ footer {
   width: 30%;
   padding: 20px;
   background-color: #f0f0f0;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
 
 .right-section {
   flex: 1;
   padding: 20px;
+  margin-left: 30%; /* Adjust for fixed left section width */
+  background-color: #fff; /* Background color for right section */
+  height: 100%;
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
+/* Profile Picture */
 .profile img {
   width: 150px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
 
-/* Scrolling Content */
-.scrollable-content {
-  height: 100%;
-  overflow-y: auto;
+/* Social Icons */
+.social-icons a {
+  color: #333; /* Changing icon color */
+  margin-right: 10px;
 }
 
-/* Styling for various sections (Projects, Experience, Skills, Education) can be added here */
-/* For example: h2, h3, p styles for these sections */
-
+/* Scrolling Content */
+.scrollable-content {
+  padding-top: 20px; /* Add padding between sections if needed */
+}
