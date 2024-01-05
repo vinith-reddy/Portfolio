@@ -59,3 +59,42 @@ footer {
 footer p {
   margin: 0;
 }
+
+/* Existing CSS remains, add these styles */
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Projects Scrolling */
+#projects {
+  overflow-y: auto;
+  max-height: 400px; /* Adjust the maximum height as needed */
+}
