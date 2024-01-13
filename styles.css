@@ -6,7 +6,7 @@
   
   .left-section {
     width: 30%;
-    padding: 0 20px;
+    padding: 0 5px;
     background-color: #daf7f5;
     position: sticky;
     top: 0;
@@ -95,6 +95,7 @@
     border-radius: 10px; /* Rounded corners */
     background-color: #f67a7a; /* Box background color */
     color: #000000; /* Text color */
+    text-decoration: none;
     transition: opacity 0.3s ease; /* Opacity transition on hover */
   }
   
