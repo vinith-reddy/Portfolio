@@ -1,43 +1,63 @@
-#Education:
-##Master of Science in Artificial Intelligence
-Yeshiva University, [City, State]
-(Expected Graduation Date: Month Year)
+# Vinith Reddy Chaduvu's Portfolio
 
-##Bachelor of Technology in Computer Science and Engineering
-Vignan Institute of Technology and Science, [City, State]
-GPA: 7.17
-Graduation Date: Month Year
+This repository contains the LaTeX source code for Vinith Reddy Chaduvu's resume and portfolio.
 
-#Projects:
+## Table of Contents
+- [Introduction](#introduction)
+- [Resume Sections](#resume-sections)
+- [Projects](#projects)
+- [Technical Skills](#technical-skills)
+- [Certificates](#certificates)
+- [Contact Information](#contact-information)
 
-##Yoga Posture Detection using Machine Learning
+## Introduction
 
-Implemented a machine learning model to detect yoga postures from images.
-Utilized Python, Scikit-learn, and [any other relevant tools/libraries] for accurate posture recognition.
-Super Mario using Deep Reinforcement Learning
+This LaTeX document serves as Vinith Reddy Chaduvu's resume and portfolio. It includes details about his education, technical skills, experience, and projects.
 
-##Developed an AI agent using deep reinforcement learning to play Super Mario.
-Employed Python and familiarities with PyTorch for the project's development.
-Image Cartoonization and Pencil Sketching
+## Resume Sections
 
-##Created a system to convert images into cartoon-style and pencil sketch representations.
-Leveraged Python and SQL for data handling and algorithm development.
+- **Summary**: A brief summary of Vinith's background, skills, and aspirations.
+- **Education**: Information about Vinith's Master's degree in Artificial Intelligence from Yeshiva University.
+- **Technical Skills**: A list of programming languages, frameworks, and tools that Vinith is proficient in.
+- **Experience**: Details about Vinith's experience as a Packaged App Development Associate at Accenture.
+- **Projects**: Highlights of some projects Vinith has worked on, including posture detection using machine learning and reinforcement learning for Super Mario AI.
+- **Certificates**: Mention of certificates earned in machine learning and deep learning specializations.
 
-#Experience:
-##Packaged App Development Associate - Accenture
-Dates of Employment: [October 2022 - October 2022]
+## Projects
 
-Developed and maintained [specific packaged applications or systems worked on] using [specific technologies or tools].
-Collaborated with cross-functional teams for [specific project goals or achievements].
-Utilized [mention any relevant skills or methodologies] to streamline app development processes.
+### [Posture Detection using Machine Learning](https://github.com/vinith-reddy/yoga-posture-detection)
+- Developed a real-time posture detection system using machine learning and computer vision.
+- Implemented Convolutional Neural Networks (CNNs) leveraging PyTorch for accurate posture classification.
+- Explored applications in healthcare for ergonomic solutions.
 
-#Skills:
-Programming Languages: Python, SQL
-Machine Learning Frameworks: Scikit-learn, PyTorch (Familiar)
-App Development: [Mention any specific tools or technologies used in packaged app development]
-Other Skills: [Include any additional relevant skills, e.g., problem-solving, teamwork]
+### [Reinforcement Learning for Super Mario AI](https://github.com/vinith-reddy/Super-Mario-Bros-RL)
+- Implemented Reinforcement Learning algorithms, specifically Deep Q-Networks (DQNs), for autonomous navigation in the Super Mario game environment.
+- Used Python and Pygame library for game interaction and decision-making optimization.
 
-#Certifications:
-AI for Everyone Certification - Coursera
-Machine Learning Specialization - Coursera
-Deep Learning Specialization - Coursera
+### Ethnic Disparities in Body Weight: NHANES Analysis
+- Conducted an in-depth analysis on NHANES dataset to explore ethnic disparities in body weight.
+- Employed Python's Pandas and Matplotlib for data cleaning and visualization.
+- Utilized statistical methods including ANOVA and moderation analysis with R.
+
+## Technical Skills
+
+- **Programming Languages**: C, Python, R, SQL
+- **Operating System**: Windows, Linux, Mac
+- **Frameworks**: Pytorch, Flask, Pyspark
+- **Data Handling**: Numpy, Pandas, Matplotlib, Scikit-learn
+- **Tools**: Git, Docker
+
+## Certificates
+
+- Machine Learning Specialization
+- Deep Learning Specialization
+
+## Contact Information
+
+- **Email**: [chaduvuvinnu@mail.com](mailto:chaduvuvinnu@mail.com)
+- **Phone**: (626) 949-5996
+- **Location**: Jersey City, NJ (07306)
+- **LinkedIn**: [Vinith Reddy Chaduvu](https://www.linkedin.com/in/vinith-reddy-98353a190/)
+- **GitHub**: [vinith-reddy](https://github.com/vinith-reddy)
+- **Portfolio**: [Vinith's Portfolio](https://vinith-reddy.github.io/Portfolio/)
+
