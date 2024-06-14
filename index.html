@@ -2,135 +2,134 @@
 <html lang="en">
 
 <head>
-  <title>Vinith's - Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Vinith's Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 
 <body>
 
-    <header class="header">
-        <div class="header-links">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </div>
-      </header>
+  <header class="header">
+    <div class="container">
+      <div class="header-links">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#profile" class="nav-link">Profile</a>
+        <a href="#work" class="nav-link">My Work</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </header>
 
   <main class="container">
-    <section class="left-section">
-      <div class="profile">
-        <h1>Vinith Reddy Chaduvu</h1>
-        <img src="vinith.jpeg" alt="Profile Picture">
-        <p>Machine learning engineer</p>
-        <div class="social-icons">
-          <a href="mailto:chaduvuvinnu@gmail.com"><i class="far fa-envelope"></i></a>
-          <a href="https://www.linkedin.com/in/vinith-reddy-98353a190/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/vinith-reddy" target="_blank"><i class="fab fa-github"></i></a>
+    <section id="introduction" class="text-center mt-4">
+      <h1>Hi, I am Vinith Reddy</h1>
+      <p>Machine Learning Engineer</p>
+    </section>
+
+    <section id="profile" class="profile d-flex align-items-start my-5">
+      <div class="profile-img" style="width: 20%;">
+        <img src="vinith.jpeg" alt="Profile Picture" class="img-fluid rounded-circle">
+      </div>
+      <div class="profile-info ml-4" style="width: 80%;">
+        <h2>About Me</h2>
+        <p>Aspiring MS in AI candidate at Yeshiva University with hands-on experience at Accenture, including client work for Vodafone. Proficient in Python, SQL, and R, eager to innovate and solve real-world challenges.</p>
+        <div class="profile-buttons mt-3">
+          <button class="btn btn-primary" onclick="showSection('skills')">Skills</button>
+          <button class="btn btn-primary" onclick="showSection('experience')">Experience</button>
+          <button class="btn btn-primary" onclick="showSection('education')">Education</button>
         </div>
-        Aspiring MS in AI candidate at Yeshiva University with hands-on experience at Accenture, including client work for Vodafone, Proficient in Python, SQL, and R, eager to innovate and solve real-world challenges.
+        <div id="skills" class="profile-section mt-3" style="display: none;">
+          <h3>Skills</h3>
+          <p>
+            <strong>Programming Languages:</strong> Python, R, SQL<br>
+            <strong>Frameworks:</strong> Pytorch, Scikit-learn, Flask<br>
+            <strong>Tools:</strong> Git, Docker<br>
+            <strong>Platforms:</strong> Windows, Linux, Mac<br>
+          </p>
+        </div>
+        <div id="experience" class="profile-section mt-3" style="display: none;">
+          <h3>Experience</h3>
+          <p><strong>Packaged App Development Associate</strong><br>
+            Accenture, Bangalore, India<br>
+            Oct 2022 - Oct 2023<br>
+            Contributed to customizing Vodafone applications by implementing AI-driven enhancements using SQL, Python, and NLTK to improve user experiences.</p>
+        </div>
+        <div id="education" class="profile-section mt-3" style="display: none;">
+          <h3>Education</h3>
+          <p><strong>Yeshiva University, New York:</strong> Master's in Artificial Intelligence</p>
+        </div>
       </div>
     </section>
 
-    <section class="right-section">
-    <div class="scrollable-content">
-
-    <h2>Projects</h2>
-
-    <div class="project">
-      <div class="projects-section project-details">
-        <div class="project-box">
-        <h3>Posture detection using machine learning</h3>
-        <img src="sample.png" alt="Project 1">
-        <p>The Yoga Pose Detection Web Application is a user-friendly tool that leverages Flask, Mediapipe, and machine learning to detect yoga poses in real-time. Whether you're a yoga enthusiast or practitioner, this application offers a convenient way to receive immediate feedback on your yoga poses.</p>
-        <div class="project-links">
-          <a href="https://github.com/vinith-reddy/yoga-posture-detection" target="_blank">GitHub</a>
+    <section id="work" class="projects-section">
+      <h2>My Work</h2>
+      <div class="projects-container">
+        <div class="project">
+          <h3>Posture detection using machine learning</h3>
+          <img src="sample.png" alt="Posture detection using machine learning" class="project-image">
+          <p>
+            The Yoga Pose Detection Web Application is a user-friendly tool that leverages Flask, Mediapipe, and machine learning to detect yoga poses in real-time. Whether you're a yoga enthusiast or practitioner, this application offers a convenient way to receive immediate feedback on your yoga poses.
+          </p>
+          <a href="https://github.com/vinith-reddy/yoga-posture-detection" target="_blank" class="btn btn-primary">View on GitHub</a>
         </div>
+        <div class="project">
+          <h3>Super Mario using Reinforcement learning</h3>
+          <img src="drfsm.gif" alt="Super Mario using Reinforcement learning" class="project-image">
+          <p>In the "Reinforcement Learning for Super Mario AI" project, I employed Deep Q-Networks (DQNs) to train an AI agent for autonomous navigation in the Super Mario game. Using Python and Pygame, the agent learned to make optimal decisions by modeling a state-action-reward framework, showcasing the application of reinforcement learning in enhancing gaming performance.</p>
+          <a href="https://github.com/vinith-reddy/Super-Mario-Bros-RL" target="_blank" class="btn btn-primary">View on GitHub</a>
         </div>
-      </div>
-    </div>
-
-    <div class="project">
-      <div class="projects-section project-details">
-        <div class="project-box">
-        <h3>Super Mario using Reinforcement learning</h3>
-        <img src="drfsm.gif" alt="Project 2">
-        <p>In the "Reinforcement Learning for Super Mario AI" project, I employed Deep Q-Networks (DQNs) to train an AI agent for autonomous navigation in the Super Mario game. Using Python and Pygame, the agent learned to make optimal decisions by modeling a state-action-reward framework, showcasing the application of reinforcement learning in enhancing gaming performance.</p>
-        <div class="project-links">
-          <a href="https://github.com/vinith-reddy/Super-Mario-Bros-RL" target="_blank">GitHub</a>
-        </div>
+        <div class="project">
+          <h3>Cartoonify and Pencil Sketch Image Converter</h3>
+          <img src="cartoonifying.jpg" alt="Cartoonify and Pencil Sketch Image Converter" class="project-image">
+          <p> The Cartoonify and Pencil Sketch Image Converter is a web-based tool designed to transform ordinary images into captivating cartoon and pencil sketch versions. Developed using Flask, a Python web framework, and powered by OpenCV for image processing, the project offers a user-friendly interface for effortless image conversion.</p>
+          <a href="https://github.com/vinith-reddy/cartoon-pencilsketch-image" target="_blank" class="btn btn-primary">View on GitHub</a>
         </div>
       </div>
-    </div>
-
-    <div class="project">
-      <div class="projects-section project-details">
-        <div class="project-box">
-        <h3>Cartoonify and Pencil Sketch Image Converter</h3>
-        <img src="cartoonifying.jpg" alt="Project 3">
-        <p> The Cartoonify and Pencil Sketch Image Converter is a web-based tool designed to transform ordinary images into captivating cartoon and pencil sketch versions. Developed using Flask, a Python web framework, and powered by OpenCV for image processing, the project offers a user-friendly interface for effortless image conversion.</p>
-        <div class="project-links">
-          <a href="https://github.com/vinith-reddy/cartoon-pencilsketch-image" target="_blank">GitHub</a>
-        </div>
-        </div>
+    </section>
+    
+    <section id="contact" class="contact-section mt-5">
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> Email: chaduvuvinnu@gmail.com</p>
+        <p><i class="fas fa-phone"></i> Mobile: +1 6269495996</p>
       </div>
-    </div>
-      
-    <div class="projects-section project">
-      <div class="project-details">
-        <div class="project-box">
-        <h3>Ethnic Disparities in Body Weight: NHANES Analysis</h3>
-        <p>Conducted analysis on NHANES dataset to explore ethnic disparities in body weight. Cleaned and analyzed data, performed ANOVA and moderation analysis to assess differences in mean weight across racial groups, considering age as a factor. Produced descriptive statistics and visualizations, identifying potential disparities. Results aimed to guide targeted interventions for addressing health inequalities</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/vinith-reddy/" target="_blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/vinith.reddy/" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/vinith-reddy" target="_blank" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <form class="contact-form mt-4">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Your Name">
         </div>
-      </div>
-    </div>
-    </div>
-
-     
-    <h2>Experience</h2>
-     <div class="experience-section">
-        <p><strong>Packaged App Development Associate</strong><br>
-        Accenture, Bangalore, India<br>
-        Oct 2022 - Oct 2023<br>
-        As a Packaged App Development Associate at Accenture, I led AI initiatives optimizing Vodafone apps with SQL, Python, and NLTK, driving improved performance. Developed key features like sentiment analysis tools and chatbots, boosting user engagement. Successfully addressed challenges in system performance and data privacy, ensuring project success. Implemented optimizations for enhanced application responsiveness and user satisfaction from October 2022 to October 2023.</p>
-     </div>
-
-    <h2>Skills</h2>
-     <div class="skills-section">
-        <ul>
-            <li><strong>Programming Languages:</strong> Proficient in C, Python, R, and SQL, enabling versatile application development and data analysis.</li>
-
-            <li><strong>Operating Systems:</strong> Experienced in Windows, Linux, and Mac environments, ensuring adaptability across various platforms.</li>
-
-            <li><strong>Frameworks:</strong> Skilled in leveraging Pytorch for deep learning, Flask for web development, and Pyspark for big data processing.</li>
-
-            <li><strong>Data Handling:</strong> Adept at data manipulation and analysis using Numpy, Pandas, Matplotlib, and Scikit-learn, ensuring robust data-driven insights.</li>
-
-            <li><strong>Tools:</strong> Proficient in version control with Git and containerization with Docker, streamlining collaborative development processes.</li>
-        </ul>
-     </div>
-
-    <h2>Education</h2>
-     <div class="education-section">
-        <strong>Yeshiva University, New York:</strong> Master's in Artificial intelligence
-    </div>
-
-    <h2>Certifications</h2>
-     <div class="certifications-section">
-        <ul>
-        <li>Machine Learning Specialization</li>
-        <li>Deep Learning Specialization</li>
-        </ul>
-        
-      </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Your Email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
     </section>
   </main>
 
-  <footer class="footer" id="contact">
-    <p>Email: chaduvuvinnu@gmail.com | Mobile: +1 6269495996</p>
+  <footer class="footer text-center">
+    <div class="container">
+      <p>&copy; Vinith Reddy</p>
+    </div>
   </footer>
 
+  <script src="rs.js"></script>
 </body>
 
 </html>
