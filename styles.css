@@ -1,115 +1,129 @@
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #f9f4f4;
+  background-color: #050000;
+}
+
+.header {
+  background-color: #4e0101;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.header-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-links a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header-links a:hover {
+  color: #f4f4f4;
+}
 
 .container {
-    display: flex;
-    position: relative;
-  }
-  
-  .left-section {
-    width: 30%;
-    padding: 0 15px;
-    background-color: #daf7f5;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: auto;
-  }
-  
-  .right-section {
-    flex: 1;
-    padding: 0 20px;
-    background-color: #ffffff;
-  }
-  
-  /* Specific sections within the right section */
-  .projects-section {
-    background-color: #ebe65f; /* Background color for projects */
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(59, 59, 59, 0.1); /* Adding shadow for depth */
-  }
+  margin-top: 1rem;
+}
 
-  .project-box {
-    background-color: #ebe65f; /* Shared background color for boxes */
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(59, 59, 59, 0.1); /* Adding shadow for depth */
-    transition: background-color 0.3s ease; /* Smooth transition effect */
-  }
-  
-  .project-box:hover {
-    background-color: rgba(235, 230, 95, 0.8); /* Change opacity on hover */
-  }
-  
-  .experience-section {
-    background-color: #caeb88; /* Background color for experience */
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(59, 59, 59, 0.1); /* Adding shadow for depth */
-  }
-  
-  .skills-section {
-    background-color: #caeb88; /* Background color for skills */
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(59, 59, 59, 0.1); /* Adding shadow for depth */
-  }
-  
-  .education-section {
-    background-color: #caeb88; /* Background color for education */
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(59, 59, 59, 0.1); /* Adding shadow for depth */
-  }
+#introduction {
+  background-color: #000000;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
-  .certifications-section {
-    background-color: #caeb88; /* Background color for education */
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(59, 59, 59, 0.1); /* Adding shadow for depth */
-  }
-  
-  /* Profile Picture */
-  .profile img {
-    width: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
-  /* Social Icons */
-  .social-icons a {
-    color: #333; /* Changing icon color */
-    margin-right: 15px;
-  }
-  
-  /* Scrolling Content */
-  .scrollable-content {
-    padding-top: 20px; /* Add padding between sections if needed */
-  }
-  
-  .header {
-    display: flex;
-    justify-content: flex-end; /* Aligns content to the right */
-    background-color: #430202; /* Black background color */
-    color: #ffffff; /* White text color */
-    padding: 30px;
+.profile {
+  display: flex;
+  align-items: start;
+}
 
-  }
+.profile-img img {
+  width: 100%;
+  border-radius: 50%;
+}
 
-  .header-links a {
-    margin-left: 15px; /* Add spacing between links */
-    padding: 8px 12px; /* Adjust padding for better click area */
-    border-radius: 10px; /* Rounded corners */
-    background-color: #f67a7a; /* Box background color */
-    color: #000000; /* Text color */
-    text-decoration: none;
-    transition: opacity 0.3s ease; /* Opacity transition on hover */
-  }
-  
-  .header-links a:hover {
-    opacity: 0.7; /* Reduce opacity on hover */
-  }
-  
-  .footer {
-    background-color: #430202; /* Black background color */
-    color: #ffffff; /* White text color */
-    padding: 30px;
-    text-align: center; /* Center-align text */
-  }
-  
-  .footer p {
-    margin: 0; /* Remove default margin for paragraphs */
-  }
+.profile-info {
+  margin-left: 2rem;
+  width: 80%;
+}
+
+.profile-info h2,
+.profile-info h3 {
+  margin-top: 1rem;
+}
+
+.profile-buttons button {
+  margin-right: 1rem;
+}
+
+.projects-section {
+  padding: 2rem 0;
+}
+
+.projects-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+.projects-container::-webkit-scrollbar {
+  display: none;
+}
+
+.project {
+  background-color: #004c0e;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Adjust based on the desired width */
+  height: 500px; /* Adjust based on the desired height */
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project h3 {
+  margin-top: 0;
+}
+
+.project p {
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.project .btn {
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  background-color: #600000;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.project .btn:hover {
+  background-color: #b34200;
+}
+
+
+.footer {
+  background-color: #4e0101;
+  color: #040000;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
