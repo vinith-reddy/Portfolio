@@ -2,132 +2,385 @@
 <html lang="en">
 
 <head>
-  <title>Vinith's Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinith Reddy Chaduvu - AI/ML Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <header class="header">
-    <div class="container">
-      <div class="header-links">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#profile" class="nav-link">Profile</a>
-        <a href="#work" class="nav-link">My Work</a>
-        <a href="#contact" class="nav-link">Contact</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">VR</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="Vinith_resume (1).pdf" class="nav-link resume-btn" download>Resume</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="container">
-    <section id="introduction" class="text-center mt-4">
-      <h1>Hi, I am Vinith Reddy</h1>
-      <p>Aspiring Machine Learning Engineer</p>
-    </section>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Vinith Reddy Chaduvu</span>
+          </h1>
+          <h2 class="hero-subtitle">AI/ML Engineer & Data Scientist</h2>
+          <p class="hero-description">
+            Passionate about building intelligent systems and solving complex problems through machine learning, 
+            with expertise in knowledge graphs, RAG systems, and sustainable computing.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="vinith0.jpeg" alt="Vinith Reddy Chaduvu" class="profile-img">
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
 
-    <section id="profile" class="profile d-flex align-items-start my-5">
-      <div class="profile-img" style="width: 20%;">
-        <img src="vinith0.jpeg" alt="Profile Picture" class="img-fluid rounded-circle">
-      </div>
-      <div class="profile-info ml-4" style="width: 80%;">
-        <h2>About Me</h2>
-        <p>Aspiring MS in AI candidate at Yeshiva University with hands-on experience at Accenture, including client work for Vodafone. Proficient in Python, SQL, and R, eager to innovate and solve real-world challenges.</p>
-        <div class="profile-buttons mt-3">
-          <button class="btn btn-primary" onclick="showSection('skills')">Skills</button>
-          <button class="btn btn-primary" onclick="showSection('experience')">Experience</button>
-          <button class="btn btn-primary" onclick="showSection('education')">Education</button>
-        </div>
-        <div id="skills" class="profile-section mt-3" style="display: none;">
-          <h3>Skills</h3>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
           <p>
-            <strong>Programming Languages:</strong> Python, R, SQL<br>
-            <strong>Frameworks:</strong> Pytorch, Scikit-learn, Flask<br>
-            <strong>Tools:</strong> Git, Docker<br>
-            <strong>Platforms:</strong> Windows, Linux, Mac<br>
+            I'm a Master's student in Artificial Intelligence at Yeshiva University, with hands-on experience 
+            in developing AI/ML solutions. My work focuses on knowledge graph-based systems, reinforcement learning, 
+            and sustainable computing applications.
           </p>
-        </div>
-        <div id="experience" class="profile-section mt-3" style="display: none;">
-          <h3>Experience</h3>
-          <p><strong>Packaged App Development Associate</strong><br>
-            Accenture, Bangalore, India<br>
-            Oct 2022 - Oct 2023<br>
-            Contributed to customizing Vodafone applications by implementing AI-driven enhancements using SQL, Python, and NLTK to improve user experiences.</p>
-        </div>
-        <div id="education" class="profile-section mt-3" style="display: none;">
-          <h3>Education</h3>
-          <p><strong>Yeshiva University, New York:</strong> Master's in Artificial Intelligence</p>
-          <p><strong>Vignan Institute of Technology and Science, Hyderabad:</strong> Bachelor's in Computer Science</p>
+          <p>
+            Currently working on the <strong>Carbon-EF project</strong> - a knowledge graph-based system for global 
+            emission factor recommendations, where I've contributed to data collection, model fine-tuning, and 
+            implementing graph RAG (Retrieval-Augmented Generation) systems.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <h3>2+</h3>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat">
+              <h3>10+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat">
+              <h3>5+</h3>
+              <p>Technologies</p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="work" class="projects-section">
-      <h2>My Work</h2>
-      <div class="projects-container">
-        <div class="project">
-          <h3>Posture detection using machine learning</h3>
-          <img src="sample.png" alt="Posture detection using machine learning" class="project-image">
-          <p>
-            A user-friendly tool using Flask, Mediapipe, and machine learning to detect yoga poses in real-time, offering immediate feedback for yoga practitioners.
+  <!-- Featured Project Section -->
+  <section id="featured-project" class="featured-project">
+    <div class="container">
+      <h2 class="section-title">Featured Project</h2>
+      <div class="project-card featured">
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">Carbon-EF: Knowledge Graph-based Emission Factor System</h3>
+            <div class="project-badges">
+              <span class="badge">AI/ML</span>
+              <span class="badge">Knowledge Graph</span>
+              <span class="badge">RAG</span>
+              <span class="badge">Sustainability</span>
+            </div>
+          </div>
+          <p class="project-description">
+            A sophisticated system for real-time, region-specific emission factor recommendations using 
+            knowledge graphs, vector search, and large language models. The system achieves ~150ms end-to-end 
+            latency and covers 44+ regions with 87.2% precision.
           </p>
-          <a href="https://github.com/vinith-reddy/yoga-posture-detection" target="_blank" class="btn btn-primary">View on GitHub</a>
-        </div>
-        <div class="project">
-          <h3>Super Mario using Reinforcement learning</h3>
-          <img src="drfsm.gif" alt="Super Mario using Reinforcement learning" class="project-image">
-          <p>
-            Developed an AI agent using Deep Q-Networks (DQNs) in Python and Pygame to autonomously navigate and optimize decisions in the Super Mario game.
-          </p>
-          <a href="https://github.com/vinith-reddy/Super-Mario-Bros-RL" target="_blank" class="btn btn-primary">View on GitHub</a>
-        </div>
-        <div class="project">
-          <h3>Cartoonify and Pencil Sketch Image Converter</h3>
-          <img src="cartoonifying.jpg" alt="Cartoonify and Pencil Sketch Image Converter" class="project-image">
-          <p>
-            A web-based tool developed with Flask and OpenCV to transform images into cartoon and pencil sketch versions, providing a simple interface for image conversion.
-          </p>
-          <a href="https://github.com/vinith-reddy/cartoon-pencilsketch-image" target="_blank" class="btn btn-primary">View on GitHub</a>
+          <div class="project-details">
+            <div class="detail-item">
+              <i class="fas fa-tasks"></i>
+              <span><strong>My Role:</strong> Data collection from multiple sources, model fine-tuning, and implementing graph RAG pipeline</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-cogs"></i>
+              <span><strong>Tech Stack:</strong> Python, Neo4j, Qdrant, Mistral-7B, Streamlit, Plotly</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-database"></i>
+              <span><strong>Data Sources:</strong> IPCC AR6, EXIOBASE 3.8, OpenLCA, Climate TRACE</span>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-chart-line"></i>
+              <span><strong>Performance:</strong> 87.2% Precision@3, 4.8% MAPE, ~150ms latency</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Sbursu/Carbon-EF" target="_blank" class="btn btn-primary">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+            <a href="#" class="btn btn-secondary">View Demo</a>
+          </div>
         </div>
       </div>
-    </section>
-    
-    <section id="contact" class="contact-section mt-5">
-      <h2>Contact</h2>
-      <div class="contact-info">
-        <p><i class="fas fa-envelope"></i> Email: chaduvuvinnu@gmail.com</p>
-        <p><i class="fas fa-phone"></i> Mobile: +1 6269495996</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Other Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="sample.png" alt="Posture Detection">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Posture Detection using ML</h3>
+            <p class="project-description">
+              Real-time yoga pose detection system using Flask, Mediapipe, and machine learning 
+              for immediate feedback to practitioners.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">Mediapipe</span>
+              <span class="tech-tag">OpenCV</span>
+            </div>
+            <a href="https://github.com/vinith-reddy/yoga-posture-detection" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Project
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="drfsm.gif" alt="Super Mario RL">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Super Mario using RL</h3>
+            <p class="project-description">
+              AI agent using Deep Q-Networks (DQNs) to autonomously navigate and optimize 
+              decisions in Super Mario game environment.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">DQN</span>
+              <span class="tech-tag">Pygame</span>
+            </div>
+            <a href="https://github.com/vinith-reddy/Super-Mario-Bros-RL" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Project
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="cartoonifying.jpg" alt="Cartoonify">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Cartoonify & Pencil Sketch</h3>
+            <p class="project-description">
+              Web-based tool using Flask and OpenCV to transform images into cartoon 
+              and pencil sketch versions with simple interface.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Web</span>
+            </div>
+            <a href="https://github.com/vinith-reddy/cartoon-pencilsketch-image" target="_blank" class="project-link">
+              <i class="fab fa-github"></i> View Project
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/vinith-reddy-98353a190/" target="_blank" class="social-icon">
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3 class="category-title">Programming Languages</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-code"></i>
+              <span>R</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database"></i>
+              <span>SQL</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-code"></i>
+              <span>C</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">AI/ML Frameworks</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fas fa-brain"></i>
+              <span>PyTorch</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Scikit-learn</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-network-wired"></i>
+              <span>Neo4j</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-search"></i>
+              <span>Qdrant</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">Data & Visualization</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fas fa-table"></i>
+              <span>Pandas</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-chart-bar"></i>
+              <span>Matplotlib</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-chart-pie"></i>
+              <span>Plotly</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-calculator"></i>
+              <span>NumPy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">Tools & Platforms</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-docker"></i>
+              <span>Docker</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-linux"></i>
+              <span>Linux</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-aws"></i>
+              <span>AWS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Let's Connect</h3>
+          <p>I'm always interested in new opportunities and collaborations in AI/ML. Feel free to reach out!</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:chaduvuvinnu@gmail.com">chaduvuvinnu@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+16269495996">+1 (626) 949-5996</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <span>Jersey City, NJ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/vinith-reddy-98353a190/" target="_blank" class="social-link">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://github.com/vinith-reddy" target="_blank" class="social-icon">
+        <a href="https://github.com/vinith-reddy" target="_blank" class="social-link">
           <i class="fab fa-github"></i>
         </a>
+        <a href="mailto:chaduvuvinnu@gmail.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
       </div>
-      <form class="contact-form mt-4">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Your Name">
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Your Email">
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="footer text-center">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
-      <p>&copy; Vinith Reddy</p>
+      <p>&copy; 2024 Vinith Reddy Chaduvu. All rights reserved.</p>
     </div>
   </footer>
 
