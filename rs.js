@@ -1,29 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const profileLink = document.querySelector('a[href="#profile"]');
-  const contactLink = document.querySelector('a[href="#contact"]');
-  const profileSection = document.getElementById('profile');
-  const contactSection = document.getElementById('contact');
 
-  profileLink.addEventListener('click', function (event) {
-    event.preventDefault();
-    profileSection.scrollIntoView({ behavior: 'smooth' });
-  });
+  // Animate Logo Text on Load - Horizontal Expansion
+  const logoText = document.querySelector('.logo-text');
+  if (logoText) {
+    logoText.style.overflow = 'hidden';
+    logoText.style.whiteSpace = 'nowrap';
+    logoText.style.display = 'inline-block';
+    logoText.style.width = '30px';
 
-  contactLink.addEventListener('click', function (event) {
-    event.preventDefault();
-    contactSection.scrollIntoView({ behavior: 'smooth' });
-  });
+    setTimeout(() => {
+      logoText.textContent = 'Vinith Chaduvu';
+      logoText.style.transition = 'width 1.2s cubic-bezier(0.4, 0, 0.2, 1)';
 
-  window.showSection = function (sectionId) {
-    const sections = document.querySelectorAll('.profile-section');
-    sections.forEach(section => {
-      if (section.id === sectionId) {
-        section.style.display = 'block';
-      } else {
-        section.style.display = 'none';
-      }
-    });
-  };
+      setTimeout(() => {
+        logoText.style.width = '180px'; // Increased width for full name
+      }, 100);
+
+      setTimeout(() => {
+        logoText.style.width = '30px';
+        setTimeout(() => {
+          logoText.textContent = 'VC';
+        }, 1200);
+      }, 3500);
+    }, 800);
+  }
 
   // Mobile Navigation Toggle
   const hamburger = document.querySelector('.hamburger');
@@ -71,34 +71,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Contact Form Handling
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      
-      // Get form data
-      const formData = new FormData(this);
-      const name = formData.get('name');
-      const email = formData.get('email');
-      const message = formData.get('message');
-      
-      // Simple validation
-      if (!name || !email || !message) {
-        showNotification('Please fill in all fields', 'error');
-        return;
+  // Active navigation link based on scroll position
+  window.addEventListener('scroll', function () {
+    let current = '';
+    const sections = document.querySelectorAll('section');
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.scrollY >= sectionTop - 200) {
+        current = section.getAttribute('id');
       }
-      
-      if (!isValidEmail(email)) {
-        showNotification('Please enter a valid email address', 'error');
-        return;
-      }
-      
-      // Simulate form submission (replace with actual form handling)
-      showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
-      this.reset();
     });
-  }
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
 
   // Intersection Observer for Animations
   const observerOptions = {
@@ -116,12 +108,52 @@ document.addEventListener('DOMContentLoaded', function () {
   }, observerOptions);
 
   // Observe elements for animation
-  document.querySelectorAll('.project-card, .skill-category, .contact-item, .stat').forEach(el => {
+  document.querySelectorAll('.project-card, .service-card, .expertise-category, .learning-card, .stat-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
   });
+
+  // Typewriter Effect for Hero Subtitle
+  const dynamicText = document.querySelector('.typewriter-dynamic');
+  if (dynamicText) {
+    const phrases = [
+      'Building RAG Systems',
+      'Fine-tuning LLMs',
+      'Creating AI Agents',
+      'Extracting Document Intelligence',
+      'Deploying ML Solutions'
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    const typeEffect = () => {
+      const currentPhrase = phrases[phraseIndex];
+
+      if (isDeleting) {
+        dynamicText.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        dynamicText.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 2000);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(typeEffect, 500);
+      } else {
+        setTimeout(typeEffect, isDeleting ? 50 : 100);
+      }
+    };
+
+    setTimeout(typeEffect, 1000);
+  }
 
   // Typing Animation for Hero Title
   const heroTitle = document.querySelector('.hero-title');
@@ -142,15 +174,63 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(typeWriter, 500);
   }
 
-  // Parallax Effect for Hero Section
-  const hero = document.querySelector('.hero');
-  if (hero) {
-    window.addEventListener('scroll', function () {
-      const scrolled = window.pageYOffset;
-      const rate = scrolled * -0.5;
-      hero.style.transform = `translateY(${rate}px)`;
+  // Cursor Trail Effect
+  const createTrail = () => {
+    const trail = document.createElement('div');
+    trail.className = 'cursor-trail';
+    document.body.appendChild(trail);
+    return trail;
+  };
+
+  let trails = [];
+  let mouseX = 0, mouseY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    if (trails.length < 5) {
+      trails.push(createTrail());
+    }
+
+    const trail = trails.shift();
+    trail.style.left = mouseX + 'px';
+    trail.style.top = mouseY + 'px';
+    trail.style.opacity = '1';
+
+    setTimeout(() => {
+      trail.style.opacity = '0';
+    }, 100);
+
+    trails.push(trail);
+  });
+
+  // Parallax effect for gradient orbs
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const orb1 = document.querySelector('.orb-1');
+    const orb2 = document.querySelector('.orb-2');
+    const orb3 = document.querySelector('.orb-3');
+
+    if (orb1) orb1.style.transform = `translate(${scrolled * 0.1}px, ${scrolled * 0.1}px)`;
+    if (orb2) orb2.style.transform = `translate(${-scrolled * 0.1}px, ${-scrolled * 0.15}px)`;
+    if (orb3) orb3.style.transform = `translate(-50%, -50%) translateY(${scrolled * 0.05}px)`;
+  });
+
+  // Magnetic Button Effect
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
     });
-  }
+
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'translate(0, 0)';
+    });
+  });
 
   // Project Card Hover Effects
   document.querySelectorAll('.project-card').forEach(card => {
@@ -163,16 +243,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Skill Item Hover Effects
-  document.querySelectorAll('.skill-item').forEach(item => {
-    item.addEventListener('mouseenter', function () {
-      this.style.transform = 'translateX(10px)';
-      this.style.borderColor = 'var(--accent-primary)';
+  // Skill Pill Hover Effects
+  document.querySelectorAll('.skill-pill').forEach(pill => {
+    pill.addEventListener('mouseenter', function () {
+      this.style.transform = 'scale(1.05) translateY(-2px)';
     });
-    
-    item.addEventListener('mouseleave', function () {
-      this.style.transform = 'translateX(0)';
-      this.style.borderColor = 'var(--border-color)';
+
+    pill.addEventListener('mouseleave', function () {
+      this.style.transform = 'scale(1) translateY(0)';
     });
   });
 
@@ -185,11 +263,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Utility Functions
-  function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
+  // Animate progress bars when they come into view
+  const progressObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.dataset.animated) {
+        const progressFill = entry.target.querySelector('.progress-fill');
+        if (progressFill) {
+          const width = progressFill.style.width;
+          progressFill.style.width = '0';
+          setTimeout(() => {
+            progressFill.style.width = width;
+          }, 100);
+        }
+        entry.target.dataset.animated = 'true';
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.progress-bar').forEach(bar => {
+    progressObserver.observe(bar);
+  });
 
   function showNotification(message, type = 'info') {
     // Create notification element
